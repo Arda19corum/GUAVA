@@ -53,14 +53,14 @@ linuxR(){
 }
 
 macR(){
-  curl -O https://cran.r-project.org/bin/macosx/R-3.5.0.pkg;
+  curl -O https://cran.r-project.org/bin/macosx/R-3.5.1.pkg;
 }
 
 installR(){
   if [ $machine = "Mac" ]; then
 	echo ">>> >> > Downloading R > >> >>>"
 	macR;
-	sudo installer -verbose -pkg R-3.5.0.pkg -target / 
+	sudo installer -verbose -pkg R-3.5.1.pkg -target / 
   else
 	linuxR;
   fi
